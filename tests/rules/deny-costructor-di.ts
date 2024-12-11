@@ -83,8 +83,6 @@ new RuleTester().run('deny-custructor-di', rule, {
           private store = inject(Store);
           private readonly navCtrl = inject(NavController);
           public readonly helper = inject(HelperService);
-          
-          constructor() {}
         }
       `,
       errors: [{ messageId: 'denyConstructorDI' }],
@@ -112,8 +110,6 @@ new RuleTester().run('deny-custructor-di', rule, {
         })
         export class SigninPage {
           public platform = inject(Platform);
-          
-          constructor() {}
         }
       `,
       errors: [{ messageId: 'denyConstructorDI' }],
@@ -141,8 +137,6 @@ new RuleTester().run('deny-custructor-di', rule, {
         })
         export class SigninPage {
           private platform = inject(Platform);
-          
-          constructor() {}
         }
       `,
       errors: [{ messageId: 'denyConstructorDI' }],
@@ -170,8 +164,6 @@ new RuleTester().run('deny-custructor-di', rule, {
         })
         export class ConfirmPage {
           public readonly platform = inject(Platform);
-          
-          constructor() {}
         }
       `,
       errors: [{ messageId: 'denyConstructorDI' }],
